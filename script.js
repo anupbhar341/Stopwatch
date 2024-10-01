@@ -4,7 +4,7 @@ const clearLapsBtn = document.getElementById("clearLaps");
 const display = document.getElementById('display');
 
 // Adding the click sound
-const clickSound = new Audio('asserts/audio_sound_trim.mp3'); // Ensure this file exists in your project
+const clickSound = new Audio('audio_sound_trim.mp3'); // Ensure this file exists in your project
 
 // Function to format time into HH:MM:SS
 function timeToString(time) {
