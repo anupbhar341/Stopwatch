@@ -1,0 +1,223 @@
+
+/* Set body styling */
+body {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #ffeb3b 0%, #ff5722 100%); /* Yellow to Red Gradient */
+}
+
+/* Styling for the stopwatch container */
+.stopwatch {
+    text-align: center;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 320px;
+}
+
+/* Styling for the stopwatch title */
+.stopwatch h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styling for the time display */
+#display {
+    font-size: 60px;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* Styling for the buttons */
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Active state for buttons */
+.buttons button:active {
+    transform: scale(0.95); /* Slightly reduce size */
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2); /* Inset shadow */
+}
+
+
+#start {
+    background: linear-gradient(135deg, #2ad12f 0%, #115b13 100%); /* Green shades */
+}
+
+#start:hover {
+    background: linear-gradient(135deg, #81c784 0%, #66bb6a 100%); /* Lighter green on hover */
+}
+
+/* Stop button */
+#stop {
+    background: linear-gradient(135deg, #df7a7a 0%, #de3024 100%); /* Red shades */
+}
+
+#stop:hover {
+    background: linear-gradient(135deg, #ef9a9a 0%, #e57373 100%); /* Lighter red on hover */
+}
+
+/* Reset button */
+#reset {
+    background: linear-gradient(135deg, #ffbe5c 0%, #ff9900 100%); /* Yellow shades */
+}
+
+#reset:hover {
+    background: linear-gradient(135deg, #ffe0b2 0%, #ffb74d 100%); /* Lighter yellow on hover */
+}
+
+/* Lap button */
+#lap {
+    background: linear-gradient(135deg, #9ac8ed 0%, #0577d3 100%); /* Blue shades */
+}
+
+#lap:hover {
+    background: linear-gradient(135deg, #90caf9 0%, #64b5f6 100%); /* Lighter blue on hover */
+}
+
+/* Button hover effect */
+.buttons button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Disabled button style */
+.buttons button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Styling for the laps section */
+#laps {
+    margin-top: 20px;
+    max-height: 200px; /* Limit height to allow scrolling */
+    overflow-y: auto;  /* Enable vertical scroll */
+    background-color: #ebb1b1;
+    background: linear-gradient(135deg, #e75959 0%, #2796f1 100%);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Individual lap time styling */
+#laps div {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: #e2e2e2df;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add hover effect for lap items */
+#laps div:hover {
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+}
+
+/* Scrollbar styling */
+#laps::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track styles */
+#laps::-webkit-scrollbar-track {
+    background: #e0e0e0; /* Track color */
+    border-radius: 10px; /* Round track edges */
+}
+
+#laps::-webkit-scrollbar-thumb {
+    background-color: #7fefa8; /* Scrollbar thumb color */
+    border-radius: 10px;    /* Rounded scrollbar */
+    border: 1px solid #3636366d;
+}
+
+#laps::-webkit-scrollbar-thumb:hover {
+    background-color: #0bdb19; /* Hover effect on scrollbar */
+}
+
+/* Smooth scrolling effect */
+#laps {
+    scroll-behavior: smooth;
+}
+
+/* Styling for the Clear All button */
+#clearLaps {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #ff6347; /* Tomato color */
+    color: white;
+    margin-top: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Hover effect for the Clear All button */
+#clearLaps:hover, #clearLaps:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: #ff6347;
+    background-color: #fadfda8a;
+    border: 2px solid #ff6347;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .stopwatch {
+        width: 90%; /* Make it take more width on smaller screens */
+        padding: 20px; /* Reduce padding */
+    }
+
+    #display {
+        font-size: 40px; /* Smaller font for display */
+    }
+
+    .buttons button {
+        font-size: 14px; /* Smaller font for buttons */
+        padding: 8px 16px; /* Adjust button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    #display {
+        font-size: 32px; /* Even smaller font for display */
+    }
+
+    .buttons button {
+        font-size: 12px; /* Smaller font for buttons */
+        padding: 6px 12px; /* Adjust button padding */
+    }
+}
